@@ -1,252 +1,144 @@
 /*
 Calculater
-v7
+v8
 made by AxoGM
 */
 
 #include <iostream>
 using namespace std;
 
+// input
+int a, i, n, num, total;
+
+// void input
+void add(), sub(), mult(), divi(), mod();
+
+// main function
 int main() {
-    int a, b, c, num1, num2, num3, num4, num5, total;
-    char choose;
+    // interface
+    cout << "\t||||||||||||||||||||||" << endl << "\t|||||[Calculater]|||||" << endl << "\t||||||||||||||||||||||\n" << endl << "[0]+\t[1]-\t[2]×\t[3]÷\t[4]%\n" << endl << "enter operation: ";
+    cin >> a;
 
-    do {
-        Menu:
-
-        // title
-        cout << "\t||||||||||||||||||||||" << endl;
-        cout << "\t|||||[Calculater]|||||" << endl;
-        cout << "\t||||||||||||||||||||||" << endl;
-        cout << endl;
-
-        // choose
-        cout << "[0]+ [1]- [2]× [3]÷" << endl;
-        cout << endl;
-        cout << "enter operation: ";
-        cin >> a;
-
-        switch(a){
-
-            // +
-            case 0: {
-                cout << "+" << endl;
-
-                // choose number
-                cout << "[0] 2 number [1] 3 number [2] 4 number [3] 5 number" << endl;
-                cout << "choose number: " << endl;
-                cin >> b;
-                cout << endl;
-
-                switch(b){
-
-                    // 2 number +
-                    case(0): {
-                        cout << "enter number: " << endl;
-                        cin >> num1;
-                        cin >> num2;
-
-                        total = num1 + num2;
-
-                        cout << endl;
-                        cout << num1 << " + " << num2 << endl;
-                        cout << "answer: " << total << endl;
-
-                        break;
-                    }
-
-                    // 3 number +
-                    case(1): {
-                        cout << "enter number: " << endl;
-                        cin >> num1;
-                        cin >> num2;
-                        cin >> num3;
-
-                        total = num1 + num2 + num3;
-
-                        cout << endl;
-                        cout << num1 << " + " << num2 << " + " << num3 << endl;
-                        cout << "answer: " << total << endl;
-
-                        break;
-                    }
-
-                    // 4 number +
-                    case(2): {
-                        cout << "enter number: " << endl;
-                        cin >> num1;
-                        cin >> num2;
-                        cin >> num3;
-                        cin >> num4;
-
-                        total = num1 + num2 + num3 + num4;
-
-                        cout << endl;
-                        cout << num1 << " + " << num2 << " + " << num3 << " + " << num4 << endl;
-                        cout << "answer: " << total << endl;
-
-                        break;
-                    }
-
-                    // 5 number +
-                    case(3): {
-                        cout << "enter number: " << endl;
-                        cin >> num1;
-                        cin >> num2;
-                        cin >> num3;
-                        cin >> num4;
-                        cin >> num5;
-
-                        total = num1 + num2 + num3 + num4 + num5;
-
-                        cout << endl;
-                        cout << num1 << " + " << num2 << " + " << num3 << " + " << num4 << " + " << num5 << endl;
-                        cout << "answer: " << total << endl;
-
-                        break;
-                    }
-
-                    default: 
-                        cout << "error... please choose the number again." << endl;
-                }
-
-                break;
-            }
-
-            // -
-            case 1: {
-                cout << "-" << endl;
-
-                // choose number
-                cout << "[0] 2 number [1] 3 number [2] 4 number [3] 5 number" << endl;
-                cout << "choose number: " << endl;
-                cin >> b;
-                cout << endl;
-
-                switch(b){
-
-                    // 2 number -
-                    case(0): {
-                        cout << "enter number: " << endl;
-                        cin >> num1;
-                        cin >> num2;
-
-                        total = num1 - num2;
-
-                        cout << endl;
-                        cout << num1 << " - " << num2 << endl;
-                        cout << "answer: " << total << endl;
-
-                        break;
-                    }
-
-                    // 3 number -
-                    case(1): {
-                        cout << "enter number: " << endl;
-                        cin >> num1;
-                        cin >> num2;
-                        cin >> num3;
-
-                        total = num1 - num2 - num3;
-
-                        cout << endl;
-                        cout << num1 << " - " << num2 << " - " << num3 << endl;
-                        cout << "answer: " << total << endl;
-
-                        break;
-                    }
-
-                    // 4 number -
-                    case(2): {
-                        cout << "enter number: " << endl;
-                        cin >> num1;
-                        cin >> num2;
-                        cin >> num3;
-                        cin >> num4;
-
-                        total = num1 - num2 - num3 - num4;
-
-                        cout << endl;
-                        cout << num1 << " - " << num2 << " - " << num3 << " - " << num4 << endl;
-                        cout << "answer: " << total << endl;
-
-                        break;
-                    }
-
-                    // 5 number -
-                    case(3): {
-                        cout << "enter number: " << endl;
-                        cin >> num1;
-                        cin >> num2;
-                        cin >> num3;
-                        cin >> num4;
-                        cin >> num5;
-
-                        total = num1 - num2 - num3 - num4 - num5;
-
-                        cout << endl;
-                        cout << num1 << " - " << num2 << " - " << num3 << " - " << num4 << " - " << num5 << endl;
-                        cout << "answer: " << total << endl;
-
-                        break;
-                    }
-
-                    default: 
-                        cout << "error... please choose the number again." << endl;
-                }
-
-                break;
-            }
-
-            // ×
-            case 2: {
-                cout << "×" << endl;
-
-                cout << "enter number: " << endl;
-                cin >> num1;
-                cin >> num2;
-
-                total = num1 * num2;
-
-                cout << endl;
-                cout << num1 << " × " << num2 << endl;
-                cout << "answer: " << total << endl;
-
-                break;
-            }
-
-            // ÷
-            case 3: {
-                cout << "÷" << endl;
-
-                cout << "enter number: " << endl;
-                cin >> num1;
-                cin >> num2;
-
-                total = num1 / num2;
-
-                cout << endl;
-                cout << num1 << " ÷ " << num2 << endl;
-                cout << "answer: " << total << endl;
-
-                break;
-            }
-
-            default: 
-                cout << "error... try again." << endl;
+    // switch selection
+    switch(a) {
+        // function input in main function
+        case 0: {
+            cout << "\n+\n";
+            add();
+            break;
         }
-
-    c++;
-
-    } while (c == choose);
-
-    cout << endl;
-    cout << "exit? ";
-    cin >> choose;
-
-    if (choose == 'n' || choose == 'N') {
-        goto Menu;
+        case 1: {
+            cout << "\n-\n";
+            sub();
+            break;
+        }
+        case 2: {
+            cout << "\n×\n";
+            mult();
+            break;
+        }
+        case 3: {
+            cout << "\n÷\n";
+            divi();
+            break;
+        }
+        case 4: {
+            cout << "\n%\n";
+            mod();
+            break;
+        }
+        default: {
+            cout << "\n(˙◠˙) Error... Try again.\n";
+        }
     }
 
+    // output calculate
+    cout << "\nAnswer: " << total << endl;
+    
     return 0;
+}
+
+// addition function
+void add() {
+    // input for how much number to calculate
+    cout << "\nEnter the number of numbers: \n";
+    cin >> n;
+    cout << endl;
+
+    // calculate loop
+    for (i = 0; i < n; i++) {
+        cout << "Enter number " << i + 1 << ": \n";
+        cin >> num;
+
+        // format calculate
+        total = total + num;
+    }
+}
+
+// subtraction function
+void sub() {
+    // input for how much number to calculate
+    cout << "\nEnter the number of numbers: \n";
+    cin >> n;
+    cout << endl;
+
+    // calculate loop
+    for (i = 0; i < n; i++) {
+        cout << "Enter number " << i + 1 << ": \n";
+        cin >> num;
+
+        // format calculate
+        total = total - num;
+    }
+}
+
+// multplication function
+void mult() {
+    // input for how much number to calculate
+    cout << "\nEnter the number of numbers: \n";
+    cin >> n;
+    cout << endl;
+
+    // calculate loop
+    for (i = 0; i < n; i++) {
+        cout << "Enter number " << i + 1 << ": \n";
+        cin >> num;
+
+        // format calculate
+        total = total * num;
+    }
+}
+
+// division function
+void divi() {
+    // input for how much number to calculate
+    cout << "\nEnter the number of numbers: \n";
+    cin >> n;
+    cout << endl;
+
+    // calculate loop
+    for (i = 0; i < n; i++) {
+        cout << "Enter number " << i + 1 << ": \n";
+        cin >> num;
+
+        // format calculate
+        total = total / num;
+    }
+}
+
+// modules function
+void mod() {
+    // input for how much number to calculate
+    cout << "\nEnter the number of numbers: \n";
+    cin >> n;
+    cout << endl;
+
+    // calculate loop
+    for (i = 0; i < n; i++) {
+        cout << "Enter number " << i + 1 << ": \n";
+        cin >> num;
+
+        // format calculate
+        total = total % num;
+    }
 }
